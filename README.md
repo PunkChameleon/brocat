@@ -27,9 +27,17 @@ require 'brocat'
 root { "Sup" } # http://localhost:1234/
 
 api do
+  get(:sup) { "Whatup" }
+  delete(:sup) { "Damnit" }
+
   namespace :cats do
     get { "Sup here too" } # http://localhost:1234/api/cats
+
+    namespace :brocat do
+      get { "Yeah I have my own URL" } # http://localhost:1234/api/cats/brocat
+    end
   end
+
 end
 ```
 
@@ -39,7 +47,7 @@ YOU WILL WIN
 
 ## Contributing
 
-1. Fork it ( http://github.com/<my-github-username>/brocat/fork )
+1. Fork it ( http://github.com/thejchap/brocat/fork )
 2. Create your feature branch (`git checkout -b my-new-feature`)
 3. Commit your changes (`git commit -am 'Add some feature'`)
 4. Push to the branch (`git push origin my-new-feature`)
