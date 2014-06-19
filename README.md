@@ -24,11 +24,11 @@ IF YOU MAKE A FILE CALLED, FOR EXAMPLE `sup.rb` WITH THIS STUFF IN IT:
 ```ruby
 require 'brocat'
 
-root { "Sup" } # http://localhost:1234/
+root { "Sup" } # http://localhost:1234
 
 api do
-  get(:sup) { "Whatup" }
-  delete(:sup) { "Damnit" }
+  get(:sup) { "Whatup" } # http://localhost:1234/sup
+  delete(:sup) { "Damnit" } # DELETE http://localhost:1234/sup
 
   namespace :cats do
     get { "Sup here too" } # http://localhost:1234/api/cats
