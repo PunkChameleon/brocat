@@ -28,7 +28,7 @@ root { "Sup" }                                      # http://localhost:1234
 
 get(:wat) { "Wat" }                                 # http://localhost:1234/wat
 
-api do
+api do                                              # Content-Type: application/json
 
   namespace :v1 do
     get(:sup) { "Whatup" }                          # http://localhost:1234/api/v1/sup
