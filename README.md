@@ -26,7 +26,20 @@ require 'brocat'
 
 root { "Sup" }                                      # http://localhost:1234
 
-get(:wat) { "Wat" }                                 # http://localhost:1234/wat
+get(:wat) do                                        # The only templating engine you'll ever need (localhost:1234/wat)
+  title = "Wat"
+  sub_title = "SubWat"
+  
+  <<-EOS
+    <html>
+      <head><title>#{title}</title></title>
+      <body>
+        <h1>#{title}</h1>
+        <h2>#{sub_title}</h1>
+      </body>
+    </html>
+  EOS
+end
 
 api do                                              # Content-Type: application/json
 
