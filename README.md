@@ -37,7 +37,7 @@ api do
       get(:cat) { "Yeah I have my own URL" } # http://localhost:1234/api/cats/bro/cat
       
       # For more complex operations (POST http://localhost:1234/api/cats/bro/wat):
-      post(:wat) do
+      post :wat do
         BroCat = Class.new
         
         BroCat.to_s.split("o").drop(1).reverse.join('_').concat(BroCat.to_s.split("C")[0])
