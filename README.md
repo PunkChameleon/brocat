@@ -1,6 +1,5 @@
-# Brocat
-
-TODO: Write a gem description
+![alt tag](http://url/to/img.png)
+## Brocat doesn't give a shit about your web framework
 
 ## Installation
 
@@ -18,7 +17,25 @@ Or install it yourself as:
 
 ## Usage
 
-TODO: Write usage instructions here
+THE MOST BADASS DSL FOR MAKING WEB APPS
+
+IF YOU MAKE A FILE CALLED, FOR EXAMPLE `sup.rb` WITH THIS STUFF IN IT:
+
+```ruby
+require 'brocat'
+
+root { "Sup" } # http://localhost:1234/
+
+api do
+  namespace :cats do
+    get { "Sup here too" } # http://localhost:1234/api/cats
+  end
+end
+```
+
+THEN RUN: `ruby sup.rb`
+
+YOU WILL WIN
 
 ## Contributing
 
