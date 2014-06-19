@@ -13,7 +13,7 @@ module Brocat
     def initialize name = "", opts = {}, &block
       @name = name
       @routes = {}
-      @content_type = opts[:content_type]
+      @content_type = opts[:content_type] || @content_type
       instance_eval(&block) if block_given?
       self
     end
