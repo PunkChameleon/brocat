@@ -60,13 +60,9 @@ api do                                              # Content-Type: application/
           .drop(1).reverse.join('_')
           .concat(BroCat.to_s.split("C")[0])
         end
-        
       end
-      
     end
-    
   end
-  
 end
 ```
 
