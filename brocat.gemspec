@@ -7,7 +7,7 @@ Gem::Specification.new do |spec|
   spec.name          = "brocat"
   spec.version       = Brocat::VERSION
   spec.authors       = ["Justin Chapman"]
-  spec.email         = ["justin.chapman@thomsonreuters.com"]
+  spec.email         = ["commonmodestudio@gmail.com"]
   spec.summary       = %q{TODO: Write a short summary. Required.}
   spec.description   = %q{TODO: Write a longer description. Optional.}
   spec.homepage      = ""
