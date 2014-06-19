@@ -7,15 +7,11 @@
 
 Add this line to your application's Gemfile:
 
-    gem 'brocat'
+    gem 'brocat', github: "thejchap/brocat"
 
 And then execute:
 
     $ bundle
-
-Or install it yourself as:
-
-    $ gem install brocat
 
 ## Usage
 
@@ -24,6 +20,8 @@ THE MOST BADASS DSL FOR MAKING WEB APPS
 IF YOU MAKE A FILE CALLED, FOR EXAMPLE `sup.rb` WITH THIS STUFF IN IT:
 
 ```ruby
+require 'rubygems'
+require 'bundler/setup'
 require 'brocat'
 
 root { "Sup" } # http://localhost:1234
