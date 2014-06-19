@@ -31,10 +31,10 @@ api do
   delete(:sup) { "Damnit" } # DELETE http://localhost:1234/sup
 
   namespace :cats do
-    get { "Sup here too" } # http://localhost:1234/api/cats
+    get(:all) { "Sup here too" } # http://localhost:1234/api/cats/all
 
-    namespace :brocat do
-      get { "Yeah I have my own URL" } # http://localhost:1234/api/cats/brocat
+    namespace :bro do
+      get(:cat) { "Yeah I have my own URL" } # http://localhost:1234/api/cats/bro/cat
     end
   end
 
