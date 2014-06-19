@@ -1,5 +1,7 @@
-![alt tag](http://url/to/img.png)
-## Brocat doesn't give a shit about your web framework
+![Cat](http://feedbackloop-assets.s3.amazonaws.com/Screen%20Shot%202014-06-11%20at%204.19.03%20PM.png)
+
+## BROCAT DOESN'T GIVE A SHIT ABOUT YOUR WEB FRAMEWORK
+
 
 ## Installation
 
