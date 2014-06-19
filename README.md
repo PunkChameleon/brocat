@@ -29,6 +29,7 @@ root { "Sup" }                                      # http://localhost:1234
 get(:wat) { "Wat" }                                 # http://localhost:1234/wat
 
 api do
+
   namespace :v1 do
     get(:sup) { "Whatup" }                          # http://localhost:1234/api/v1/sup
     delete(:sup) { "Damnit" }                       # DELETE http://localhost:1234/api/v1/sup
@@ -46,10 +47,13 @@ api do
           .drop(1).reverse.join('_')
           .concat(BroCat.to_s.split("C")[0])
         end
+        
       end
+      
     end
+    
   end
-
+  
 end
 ```
 
