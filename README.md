@@ -24,26 +24,28 @@ require 'rubygems'
 require 'bundler/setup'
 require 'brocat'
 
-root { "Sup" }                                  # http://localhost:1234
+root { "Sup" }                                      # http://localhost:1234
 
-get(:wat) { "Wat" }                             # http://localhost:1234/wat
+get(:wat) { "Wat" }                                 # http://localhost:1234/wat
 
 api do
-  get(:sup) { "Whatup" }                        # http://localhost:1234/sup
-  delete(:sup) { "Damnit" }                     # DELETE http://localhost:1234/sup
+  namespace :v1 do
+    get(:sup) { "Whatup" }                          # http://localhost:1234/api/v1/sup
+    delete(:sup) { "Damnit" }                       # DELETE http://localhost:1234/api/v1/sup
 
-  namespace :cats do
-    get(:all) { "Sup here too" }                # http://localhost:1234/api/cats/all
+    namespace :cats do
+      get(:all) { "Sup here too" }                  # http://localhost:1234/api/v1/cats/all
 
-    namespace :bro do
-      get(:cat) { "Yeah I have my own URL" }    # http://localhost:1234/api/cats/bro/cat
+      namespace :bro do
+        get(:cat) { "Yeah I have my own URL" }      # http://localhost:1234/api/v1/cats/bro/cat
       
-      post :wat do                              # POST http://localhost:1234/api/cats/bro/wat
-        BroCat = Class.new
+        post :wat do                                # POST http://localhost:1234/api/v1/cats/bro/wat
+          BroCat = Class.new
         
-        BroCat.to_s.split("o")
-        .drop(1).reverse.join('_')
-        .concat(BroCat.to_s.split("C")[0])
+          BroCat.to_s.split("o")
+          .drop(1).reverse.join('_')
+          .concat(BroCat.to_s.split("C")[0])
+        end
       end
     end
   end
