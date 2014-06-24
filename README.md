@@ -32,7 +32,7 @@ get(:wat) do                                        # The only templating engine
   
   <<-EOS
     <html>
-      <head><title>#{title}</title></title>
+      <head><title>#{title}</title></head>
       <body>
         <h1>#{title}</h1>
         <h2>#{sub_title}</h1>
